@@ -1,0 +1,73 @@
+
+<div>
+  {{storeName}}
+  {{storeDescription}}
+  {{storeAddress}}
+  {{totalProducts}}
+  {{isStoreopen}}
+  {{currency}}
+</div>
+
+
+<div> Feature Product: 
+  {{featuredProduct.name}}
+  {{featuredProduct.price}}
+  {{featuredProduct.decr}}
+</div>
+
+<hr>
+
+<div class="products-title">Our Products</div>
+
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{productNames[0]}}</td>
+                <td>{{productPrices[0]}}</td>
+                
+            </tr>
+            <tr>
+                <td>{{productNames[1]}}</td>
+                <td>{{productPrices[1]}}</td>
+                
+            </tr>
+            <tr>
+                <td>{{productNames[2]}}</td>
+                <td>{{productPrices[2]}}</td>
+                
+            </tr>
+            <tr>
+                <td>{{productNames[3]}}</td>
+                <td>{{productPrices[3]}}</td>
+                
+            </tr>
+             <tr>
+                <td>{{productNames[4]}}</td>
+                <td>{{productPrices[4]}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+{{storeStatusMessage}} 
+<br>
+Final price: {{calculateFinalPrice}}
+
+
+<h3>Store Summary</h3>
+
+<div >
+  <p><strong>Total Products:</strong> {{ totalProducts }}</p>
+  <p><strong>Most Expensive:</strong> ${{ mostExpensive }}</p>
+  <p><strong>Cheapest:</strong> ${{ cheapest }}</p>
+  <hr>
+  <p><strong>Total Value of Inventory:</strong> ${{ totalValue }}</p>
+</div>
+  
