@@ -1,0 +1,20 @@
+<h2>Product Details</h2>
+
+<div class="details-card">
+  <!-- Image via Property Binding -->
+  <img [src]="productImage" [alt]="productName" width="400" />
+
+  <div class="details-info">
+    <!-- Text via Interpolation -->
+    <h3>{{ productName }}</h3>
+    <p>{{ productDescription }}</p>
+
+    <p><strong>Price:</strong> {{ productPrice }} JD</p>
+    <p><strong>Discount:</strong> {{ discountPercentage }}%</p>
+    <p><strong>Quantity:</strong> {{ quantity }}</p>
+    <p>
+      <strong>Status:</strong>
+      {{ isAvailable ? 'Available' : 'Out of Stock' }}
+    </p>
+  </div>
+</div>
