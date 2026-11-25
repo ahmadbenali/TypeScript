@@ -1,6 +1,15 @@
-<app-navbar></app-navbar>
-<app-header></app-header>
-<app-product-list></app-product-list>
-<app-product-details></app-product-details>
+<button (click)="showHeadphones()">Show Second Product</button>
 
-<app-footer></app-footer>
+<app-product-details
+  [name]="productName()"
+  [description]="productDescription()"
+  [price]="productPrice()"
+  [isAvailable]="productAvailable()"
+  (addToCart)="onAddToCart($event)"
+/>
+
+<app-shopping-cart
+  [name]="cartName()"
+  [price]="cartPrice()"
+  [quantity]="cartQuantity()"
+/>

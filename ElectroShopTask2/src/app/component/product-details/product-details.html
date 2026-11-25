@@ -1,20 +1,9 @@
-<h2>Product Details</h2>
+<h3>ELECTROSHOP • PRODUCT DETAILS</h3>
+<h2>{{ name }}</h2>
+<p>{{ description }}</p>
+<p>Price: ${{ price }} | Status: {{ isAvailable ? 'Available' : 'Out of stock' }}</p>
 
-<div class="details-card">
-  <!-- Image via Property Binding -->
-  <img [src]="productImage" [alt]="productName" width="400" />
-
-  <div class="details-info">
-    <!-- Text via Interpolation -->
-    <h3>{{ productName }}</h3>
-    <p>{{ productDescription }}</p>
-
-    <p><strong>Price:</strong> {{ productPrice }} JD</p>
-    <p><strong>Discount:</strong> {{ discountPercentage }}%</p>
-    <p><strong>Quantity:</strong> {{ quantity }}</p>
-    <p>
-      <strong>Status:</strong>
-      {{ isAvailable ? 'Available' : 'Out of Stock' }}
-    </p>
-  </div>
-</div>
+<button (click)="decrease()">−</button>
+<span>{{ quantity() }}</span>
+<button (click)="increase()">+</button>
+<button (click)="add()" [disabled]="!isAvailable">Add to Cart</button>
